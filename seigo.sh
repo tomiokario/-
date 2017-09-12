@@ -23,7 +23,7 @@ do
     case $res in
     1) echo $count":○" >> "mondai"$file;count=`expr $count + 1`;;
     2) echo $count":×" >> "mondai"$file;count=`expr $count + 1`;;
-    3) echo $count": ">> "mondai"$file;count=`expr $count + 1`;;
+    3) echo $count":-">> "mondai"$file;count=`expr $count + 1`;;
     q) echo 終了;count=1;break;;
     esac
 done
@@ -58,5 +58,5 @@ else
 fi
 
 
-cat $file
+open $file
 cd;cd $ad
